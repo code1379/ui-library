@@ -1,0 +1,104 @@
+.modal-wrapper {
+  background-color: #000;
+}
+
+/* 宽300 高200 的盒子 */
+.modal {
+  position: fixed;
+  width: 300px;
+  height: 200px;
+  background-color: #fff;
+  top: 0;
+
+  /* left: 50%; */
+
+  /* transform: translateX(-50%); */
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: inset 0 0 1px 0 #000;
+  z-index: 999;
+}
+
+/* title */
+.modal-title {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+}
+
+/* content */
+.modal-content {
+  width: 100%;
+  height: 100px;
+  padding: 0 10px;
+}
+
+/* 操作 operator */
+.modal-operator {
+  width: 100%;
+  display: flex;
+
+  button {
+    flex: 1;
+    line-height: 50px;
+    text-align: center;
+    // 重置 button 样式
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(170 170 170);
+    color: #fff;
+    opacity: 1;
+
+    &:active {
+      opacity: 0.6;
+      transition: opacity 0.3s;
+    }
+  }
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0 0 0 / 60%);
+  // background-color: #000;
+  // opacity: 0.6;
+  z-index: 998;
+}
+
+.my-node-enter {
+  transform: scale(0);
+}
+
+.my-node-enter-active {
+  transform: scale(1.1);
+  transition: all 0.2s linear;
+}
+
+.my-node-enter-done {
+  transform: scale(1);
+  transition: all 0.1s linear;
+}
+
+.my-node-exit {
+  transform: scale(1);
+}
+
+.my-node-exit-active {
+  transform: scale(1.1);
+  transition: all 0.1s linear;
+}
+
+.my-node-exit-done {
+  transform: scale(0);
+  transition: all 0.2s linear;
+}
